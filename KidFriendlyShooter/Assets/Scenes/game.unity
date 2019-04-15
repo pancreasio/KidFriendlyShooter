@@ -242,11 +242,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 11400004, guid: c6453f8e1f814744d8b94e5a6d1f9942, type: 3}
       propertyPath: movementSettings.BackwardSpeed
-      value: 8
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 11400004, guid: c6453f8e1f814744d8b94e5a6d1f9942, type: 3}
       propertyPath: movementSettings.StrafeSpeed
-      value: 8
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 11400004, guid: c6453f8e1f814744d8b94e5a6d1f9942, type: 3}
       propertyPath: movementSettings.RunMultiplier
@@ -263,6 +263,10 @@ PrefabInstance:
     - target: {fileID: 11400004, guid: c6453f8e1f814744d8b94e5a6d1f9942, type: 3}
       propertyPath: advancedSettings.airControl
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400004, guid: c6453f8e1f814744d8b94e5a6d1f9942, type: 3}
+      propertyPath: movementSettings.ForwardSpeed
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 2000000, guid: c6453f8e1f814744d8b94e5a6d1f9942, type: 3}
       propertyPath: field of view
@@ -536,6 +540,65 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5786181816896584221, guid: 35fa36025d4ce8a428191e6ca78bfb12,
+        type: 3}
+      propertyPath: templateArray.Array.size
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 5786181816896584221, guid: 35fa36025d4ce8a428191e6ca78bfb12,
+        type: 3}
+      propertyPath: templateArray.Array.data[0]
+      value: 
+      objectReference: {fileID: 2534827603050385386, guid: 01baae7fb2bad8b4091969abde4c45ea,
+        type: 3}
+    - target: {fileID: 5786181816896584221, guid: 35fa36025d4ce8a428191e6ca78bfb12,
+        type: 3}
+      propertyPath: templateArray.Array.data[1]
+      value: 
+      objectReference: {fileID: 1894625730879763266, guid: 7c97fa621ab782d42b4eefe6c67d5237,
+        type: 3}
+    - target: {fileID: 5786181816896584221, guid: 35fa36025d4ce8a428191e6ca78bfb12,
+        type: 3}
+      propertyPath: templateArray.Array.data[2]
+      value: 
+      objectReference: {fileID: 6078473625912050473, guid: 28423d2ffe7e8734c8da59505b4e0213,
+        type: 3}
+    - target: {fileID: 5786181816896584221, guid: 35fa36025d4ce8a428191e6ca78bfb12,
+        type: 3}
+      propertyPath: templateArray.Array.data[3]
+      value: 
+      objectReference: {fileID: 145628920007753976, guid: df01efba877fb2f47ada3cdedb71d160,
+        type: 3}
+    - target: {fileID: 5786181816896584221, guid: 35fa36025d4ce8a428191e6ca78bfb12,
+        type: 3}
+      propertyPath: templateArray.Array.data[4]
+      value: 
+      objectReference: {fileID: 266277253811491168, guid: d5a3370953e36af42a24243bc66a51a7,
+        type: 3}
+    - target: {fileID: 5786181816896584221, guid: 35fa36025d4ce8a428191e6ca78bfb12,
+        type: 3}
+      propertyPath: templateArray.Array.data[5]
+      value: 
+      objectReference: {fileID: 8700296346945784950, guid: d041f8f8a9662e64891ce16ee709b4e8,
+        type: 3}
+    - target: {fileID: 5786181816896584221, guid: 35fa36025d4ce8a428191e6ca78bfb12,
+        type: 3}
+      propertyPath: templateArray.Array.data[6]
+      value: 
+      objectReference: {fileID: 1982786966850558402, guid: 06d2b944b6b943c48bee44b30aa173e4,
+        type: 3}
+    - target: {fileID: 5786181816896584221, guid: 35fa36025d4ce8a428191e6ca78bfb12,
+        type: 3}
+      propertyPath: templateArray.Array.data[7]
+      value: 
+      objectReference: {fileID: 3852116526539933446, guid: 09015080c40652a4cbb6b360231ac41d,
+        type: 3}
+    - target: {fileID: 5786181816896584221, guid: 35fa36025d4ce8a428191e6ca78bfb12,
+        type: 3}
+      propertyPath: templateArray.Array.data[8]
+      value: 
+      objectReference: {fileID: 5992842639723331350, guid: 4079af9821970ed4398508a587d62f70,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 35fa36025d4ce8a428191e6ca78bfb12, type: 3}
 --- !u!1 &2001824588 stripped
