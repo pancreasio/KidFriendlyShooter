@@ -42,7 +42,7 @@ public class CharacterScr : MonoBehaviour
     private void Update()
     {
         RaycastHit hit;
-
+        gameManager.GetComponent<GameManagerScr>().score = score;
         if (Input.GetMouseButtonDown(0))
         {
             Debug.DrawRay(transform.GetChild(0).transform.position, transform.GetChild(0).transform.forward * 20, Color.red);
@@ -59,11 +59,13 @@ public class CharacterScr : MonoBehaviour
         if (transform.position.y <= -10)
         {
             gameManager.GetComponent<GameManagerScr>().loadEnd();
+            Destroy(this.gameObject);
         }
 
         if (hitpoints <= 0)
         {
             gameManager.GetComponent<GameManagerScr>().loadEnd();
+            Destroy(this.gameObject);
         }
     }
 }

@@ -55,3 +55,7 @@ MonoBehaviour:
   - {fileID: 6078473625912050473, guid: 28423d2ffe7e8734c8da59505b4e0213, type: 3}
   player: {fileID: 2001824588, guid: e9cd834270bfa5645a67539a21ea5fa1, type: 3}
   UIstuff: {fileID: 6469518659287393049, guid: 9f90b7879d0c0dd40b4a4426a1ff5768, type: 3}
+  EndUI: {fileID: 0}
+  trap: {fileID: 116250375903345344, guid: 633f4037ae4308a4db208e7f6101b2b8, type: 3}
+  enemySpawnTime: 10
+  score: 0

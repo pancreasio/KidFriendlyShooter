@@ -181,7 +181,7 @@ MonoBehaviour:
   gameManager: {fileID: 0}
   hitpoints: 0
   score: 0
-  forceMultiplier: 5800
+  forceMultiplier: 8000
   rayDistance: 5
   rayCastLayer:
     serializedVersion: 2

@@ -6,14 +6,18 @@ using UnityEngine.SceneManagement;
 
 public class GameManagerScr : MonoBehaviour
 {
-
     static GameObject managerInstance;
+
     public GameObject[] templateArray;
     public GameObject player;
     public GameObject UIstuff;
+    public GameObject trap;
+    public float enemySpawnTime;
+    public float score;
 
-    private GameObject[,] terrainArray = new GameObject[5,5];
+    private GameObject[,] terrainArray = new GameObject[5, 5];
     private bool levelGenerated = false;
+    private float enemyTimer = 0;
 
     void Awake()
     {
@@ -26,15 +30,18 @@ public class GameManagerScr : MonoBehaviour
     void Start()
     {
         managerInstance = this.gameObject;
+        Object.DontDestroyOnLoad(this.gameObject);
     }
 
     public void reload()
     {
+        levelGenerated = false;
         SceneManager.LoadScene(SceneManager.GetActiveScene().name, LoadSceneMode.Single);
     }
 
     public void loadMenu()
     {
+        levelGenerated = false;
         SceneManager.LoadScene("menu", LoadSceneMode.Single);
     }
     public void loadGame()
@@ -44,6 +51,7 @@ public class GameManagerScr : MonoBehaviour
     }
     public void loadEnd()
     {
+        levelGenerated = false;
         SceneManager.LoadScene("end", LoadSceneMode.Single);
     }
 
@@ -54,6 +62,7 @@ public class GameManagerScr : MonoBehaviour
 
     private void Update()
     {
+        Debug.Log(score);
         if (SceneManager.GetActiveScene().name != "game")
         {
             Cursor.lockState = CursorLockMode.None;
@@ -67,7 +76,7 @@ public class GameManagerScr : MonoBehaviour
                 {
                     for (int i0 = 0; i0 < 5; i0++)
                     {
-                        int randomNumber = Random.Range(0,8);
+                        int randomNumber = Random.Range(0, 8);
                         //switch (randomNumber)
                         //{
                         //    case 0:
@@ -101,8 +110,7 @@ public class GameManagerScr : MonoBehaviour
                         //        randomNumber = Random.Range(7, 8);
                         //        break;
                         //}
-                        Debug.Log(randomNumber);
-                        terrainArray[i, i0] = Instantiate(templateArray[randomNumber],new Vector3(i*20,0,i0*20), Quaternion.identity);
+                        terrainArray[i, i0] = Instantiate(templateArray[randomNumber], new Vector3(i * 20, 0, i0 * 20), Quaternion.identity);
                     }
                 }
                 int randomNumber0 = Random.Range(0, 5);
@@ -114,6 +122,14 @@ public class GameManagerScr : MonoBehaviour
                 newUI.transform.GetChild(0).GetComponent<HPUIScr>().player = newPlayer;
                 newUI.transform.GetChild(1).GetComponent<ScoreScr>().player = newPlayer;
                 levelGenerated = true;
+                enemyTimer = 0;
+                score = 0;
+            }
+            enemyTimer += Time.deltaTime;
+            if (enemyTimer >= enemySpawnTime)
+            {
+                Instantiate(trap, new Vector3(Random.Range(10, 90), 15, Random.Range(10, 90)), Quaternion.identity);
+                enemyTimer = 0;
             }
         }
     }

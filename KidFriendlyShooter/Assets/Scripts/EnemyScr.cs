@@ -9,4 +9,12 @@ public class EnemyScr : MonoBehaviour
     public int killScore;
 
     private int hitpoints;
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (transform.position.y >= 6)
+        {
+            Destroy(this.gameObject);
+        }
+    }
 }
