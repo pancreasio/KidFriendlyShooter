@@ -42,7 +42,7 @@ public class GameManagerScr : MonoBehaviour
 
     public void exitGame()
     {
-        exitGame();
+        Application.Quit();
     }
 
     private void Update()
