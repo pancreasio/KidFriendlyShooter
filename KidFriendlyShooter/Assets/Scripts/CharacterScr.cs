@@ -56,6 +56,11 @@ public class CharacterScr : MonoBehaviour
             }
         }
 
+        if (transform.position.y <= -10)
+        {
+            gameManager.GetComponent<GameManagerScr>().loadEnd();
+        }
+
         if (hitpoints <= 0)
         {
             gameManager.GetComponent<GameManagerScr>().loadEnd();
