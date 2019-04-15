@@ -11,7 +11,7 @@ public class GameManagerScr : MonoBehaviour
 
     void Awake()
     {
-        if (this.gameObject != managerInstance)
+        if (this.gameObject != managerInstance && managerInstance != null)
         {
             Destroy(this.gameObject);
         }
@@ -43,5 +43,14 @@ public class GameManagerScr : MonoBehaviour
     public void exitGame()
     {
         exitGame();
+    }
+
+    private void Update()
+    {
+        if (SceneManager.GetActiveScene().name != "game")
+        {
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
+        }
     }
 }
